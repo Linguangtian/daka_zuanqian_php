@@ -254,8 +254,7 @@ class MemberController extends HomeBaseController{
                 $tpl = "info_edit_address";
             } elseif( $field == 'bank_number' ) {
                 $banks = array(
-                    "支付宝",'微信',"中国农业银行","中国建设银行","中国工商银行","中国银行","交通银行","邮政储蓄银行","招商银行","兴业银行",
-                    "中信银行","中国光大银行","上海浦东发展银行","中国民生银行","深圳发展银行","上海浦东发展银行","深圳发展银行","民生银行","广东发展银行","华夏银行"
+                    "支付宝"
                 );
                 $this->assign('banks',$banks);
                 $tpl = 'info_edit_bank';
