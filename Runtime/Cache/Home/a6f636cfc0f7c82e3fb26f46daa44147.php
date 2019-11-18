@@ -154,34 +154,34 @@
 
 <div class="task_nav">
 	<ul>
-      <a href="/index.php/Home/Index/serach.html">
+     <!-- <a href="/index.php/Home/Index/serach.html">
 		<li>
 			<img src="/tpl/Public/images/HTB1FC0scMaH3KVjSZFj763FWpXab.png"/>
 			<p>任务中心</p>
 		</li>
-        </a>
+        </a>-->
 		
 		<a href="/index.php/Home/member/vip.html">
-			<li>
-			<img src="/tpl/Public/images/HTB1IGdvcL1G3KVjSZFk761K4XXaq.png"/>
+			<li style="width: 50%">
+			<img src="/tpl/Public/images/HTB1IGdvcL1G3KVjSZFk761K4XXaq.png"  style="margin: 0 auto;display: block"/>
 			<p>开通会员</p>
 		</li>
 		</a>
 		
 		<a href="/index.php/Home/Public/share">
-		<li>
-			<img src="/tpl/Public/images/HTB1R2BvcUGF3KVjSZFv762_nXXa6.png"/>
+			<li style="width: 50%">
+			<img src="/tpl/Public/images/HTB1R2BvcUGF3KVjSZFv762_nXXa6.png" style="margin: 0 auto; display: block"/>
 			<p>邀请好友</p>
 		</li>
 		</a>
 		
 		<!--<a href="/index.php/Home/Page/show/id/12.html">-->
-		<a href="/index.php/Home/Page/kefu">
+		<!--<a href="/index.php/Home/Page/kefu">
 			<li>
 			<img src="/tpl/Public/images/HTB1M2hDcHus3KVjSZKb760qkFXax.png"/>
 			<p>联系客服</p>
 		</li>
-		</a>
+		</a>-->
 		
 	</ul>
 </div>
@@ -207,7 +207,7 @@
 	</div>
 </div>
 
-	<div class="found-home">
+<!--	<div class="found-home">
 		<ul>
 			<li>
 				<img src="/tpl/Public/images/3b0a8f8cb9ac6ee20722691ea5077656_wDEkwb5U4ObbAAAAABJRU5ErkJggg==.png"/>
@@ -232,7 +232,7 @@
 				<a href="<?php echo U('Index/serach',array('level'=>3));?>">GO <i></i></a>
 			</li>
 
-			<!--
+			&lt;!&ndash;
             <li>
                   <img src="http://dj.mmfdpp.cn/f3.png"/>
                   <p>达人任务</p>
@@ -243,9 +243,9 @@
                   <p>敬请期待</p>
                   <a href="#">GO <i></i></a>
               </li>
-              -->
+              &ndash;&gt;
 		</ul>
-	</div>
+	</div>-->
 	
 	
 	<!--<div class="task_zwnr">-->

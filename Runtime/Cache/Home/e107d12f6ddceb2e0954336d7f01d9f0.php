@@ -294,7 +294,7 @@
 	</div>
 	<p style="width: 100%;height: 10px;background: #ededed;float: left;margin-top: 10px;"></p>
 
-	<div class="user_index_shz">
+	<!--<div class="user_index_shz">
 		<ul>
 			<a href="<?php echo U('TaskApply/index');?>">
 			<li>
@@ -310,7 +310,7 @@
 			</li>
 			</a>
 		</ul>
-	</div>
+	</div>-->
 	
 	<p style="width: 100%;height: 10px;background: #ededed;float: left;margin-top: 10px;"></p>
 
@@ -350,7 +350,7 @@
 			</li>
 			</a>
 			
-			<a href="<?php echo U('info');?>">
+		<!--	<a href="<?php echo U('info');?>">
 			<li>
 				<img src="/tpl/Public/images/HTB1calEcL1G3KVjSZFk761K4XXaN.png"/>
 				<p>认证中心</p>
@@ -364,7 +364,7 @@
 				<p>喵赚Q群</p>
 			</li>
 			</a>
-			
+			-->
 			
 			<a href="<?php echo U('password');?>">
 			<li>
@@ -379,13 +379,13 @@
 				<p>邀请好友</p>
 			</li>
 			</a>
-
+<!--
 			<a href="<?php echo U('Page/show', ['id' => 6]);?>">
 			<li>
 				<img src="/tpl/Public/images/HTB1kgzjXMFY.1VjSZFq761dbXXa4.png"/>
 				<p>联系我们</p>
 			</li>
-			</a>
+			</a>-->
 			<a href="<?php echo U('Member/paihang');?>">
 			<li>
 				<img src="/tpl/Public/images/HTB1kgzjXMFY.1VjSZFq761dbXXa4.png"/>
@@ -493,12 +493,17 @@ $(".ystep1").setStep('<?php echo ($setStep); ?>');
               <p>大厅</p>
             </a>
         </li>
-        <li <?php if(CONTROLLER_NAME == 'Task2'): ?>class="active"<?php endif; ?> >
-        <div class="fabu">
-            <a href="<?php echo U('Task/handle');?>" style="font-size: 35px; color: #fff; ">+</a>
-        </div>
 
+
+        <li>
+        <a href="https://www.baifenfa.com/app.php/MzQ1">
+            <span><i class="icon_app" style="width: 20px;height: 20px;"></i></span>
+            <p>下载</p>
+        </a>
         </li>
+
+
+
 		<li <?php if(CONTROLLER_NAME == 'Member' and ACTION_NAME == 'notice'): ?>class="active"<?php endif; ?> >
            <a href="<?php echo U('Member/notice');?>">
                 <span><i class="icon_xiaoxi" style="width: 20px;height: 20px;"></i></span>

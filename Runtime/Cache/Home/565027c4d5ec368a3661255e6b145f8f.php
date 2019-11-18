@@ -58,8 +58,8 @@
     <div class="welcome"><img src="<?php echo ($sys_config["web_logo"]); ?>" style="width: 108px;height: 108px;display: block;margin: 0 auto;"></div>
 
     <div class="reg_tab login-inp" data-tab="email">
-        <a class="email active" style="display:<?php echo C('EMAIL_STATUS') ?'':'none' ;?>" >邮箱注册</a>
-        <a class="phone " >手机号注册</a>
+     <!--   <a class="email active" style="display:<?php echo C('EMAIL_STATUS') ?'':'none' ;?>" >邮箱注册</a>-->
+        <a class=" active" >手机号注册</a>
     </div>
 
 
@@ -138,6 +138,24 @@
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
+
+    $(function () {
+
+        $(this).addClass('active');
+        $(this).siblings().removeClass('active');
+        if( $(this).hasClass('email')){
+            $('.reg_tab').attr('data-tab','email');
+            $('.reg_email').show();
+            $('.reg_phone').hide();
+        }else{
+            $('.reg_tab').attr('data-tab','phone');
+            $('.reg_email').hide();
+            $('.reg_phone').show();
+        }
+
+    })
+
+
     $('.reg_tab a').click(function () {
         $(this).addClass('active');
         $(this).siblings().removeClass('active');
