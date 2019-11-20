@@ -36,9 +36,9 @@ class QrcodeController extends HomeBaseController
         $url = U('Public/reg',array('smid'=>$member_id),'',true);
 //        var_dump($this->sp_qrcode_physics_path($qrcode_name));die;
 
-        if( file_exists($this->sp_qrcode_physics_path($qrcode_name)) == false ) {
+      /*  if( file_exists($this->sp_qrcode_physics_path($qrcode_name)) == false ) {*/
             $this->create_qrcode($url, $this->sp_qrcode_physics_path($qrcode_name));
-        }
+     /*   }*/
         $path = $this->sp_qrcode_http_path($qrcode_name);
 //        var_dump($path);die;
         $this->success('二维码生成成功', $path);

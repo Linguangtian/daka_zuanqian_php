@@ -24,8 +24,8 @@
 <div id="body">
     <div class="body_main" style="margin-top:-px;">
 		<!--QQ 1044766678-->
-		<!-- 弹窗提醒-->
-	<!--	<div class="pop-background flex" id="myModal">
+	<!--	&lt;!&ndash; 弹窗提醒&ndash;&gt;
+		<div class="pop-background flex" id="myModal">
 			<div class="ggnotice flex fw">
 				<img src="/tpl/Public/images/topnotice.png" class="ggnotice-img">
 				<div class="ggnotice-html"><p style="margin-left:0cm; margin-right:0cm; text-align:center"><span style="font-size:12pt"><span style="font-family:宋体"><strong><span style="font-size:13.5pt"><span style="font-family:宋体">
@@ -43,9 +43,9 @@
 	
         <!--banner部分 开始-->
 		<div style="background: #ff5196;">
-			<!--<div style="padding:5% 6%">
-				<input id="serachInput" type="text" data-danmu="<?php echo C('SHOW_Barrage');?>" style="width: 100%;border-radius: 7px;height: 30px;text-align: center" placeholder="输入关键词">
-			</div>-->
+			<div style="padding:5% 6%">
+				<input id="serachInput" type="text" data-danmu="<?php echo C('SHOW_Barrage');?>" style="width: 100%;border-radius: 7px;height: 30px;text-align: center" placeholder="输入关键词" hidden>
+			</div>
 		</div>
 		<div style="height: 50px;background: #ff5196;"> </div>
 		<div id="oval">
@@ -365,9 +365,9 @@
 
 
     $(document).ready(function () {
-    /*    if(getCookie('notice')=='23'){
+        if(getCookie('notice')=='23'){
             modal.style.display = "none";
-        }*/
+        }
     });
 
     //轮播图初始化
