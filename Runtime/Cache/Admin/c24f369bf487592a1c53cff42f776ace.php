@@ -61,7 +61,7 @@
         <div class="navbar-header pull-right" role="navigation">
             <ul class="nav ace-nav">
                 <li class="light-blue">
-                    <a data-toggle="dropdown" href="javascript:void(0)" onclick="ClearCache()" class="dropdown-toggle">
+                    <a data-toggle="dropdown"  onclick="ClearCache()" class="dropdown-toggle">
                         <span class="user-info" style="top:14px">
                            清理缓存
                         </span>
@@ -280,16 +280,16 @@ function ClearCache() {
     });
 }
 
-function updateVersion() {
+/*function updateVersion() {
     //多窗口模式，层叠置顶
-  //  layer.open({
-    //    type: 2 //此处以iframe举例
-    //    , title: '有新的版本更新提示!'
-    //    , area: ['560px', '350px']
-    //    , shade: 0
-    //    ,skin: 'layui-layer-setmybg'
-    //    , maxmin: true
-    //    , content: "<?php echo U('Index/Clear',['type'=>1]);?>"
+   layer.open({
+      type: 2 //此处以iframe举例
+     , title: '有新的版本更新提示!'
+      , area: ['560px', '350px']
+     , shade: 0
+     ,skin: 'layui-layer-setmybg'
+      , maxmin: true
+   , content: "<?php echo U('Index/Clear',['type'=>1]);?>"
         , btn: ['联系客服获取最新版本', '关闭'] //只是为了演示
         , yes: function () {
             window.open('http://wpa.qq.com/msgrd?v=3&uin=2125118291&site=qq&menu=yes');
@@ -303,7 +303,7 @@ function updateVersion() {
             layer.setTop(layero); //重点2
         }
     });
-}
+}*/
 
 
 function updateV() {

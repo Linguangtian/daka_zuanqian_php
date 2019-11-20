@@ -325,12 +325,17 @@
               <p>大厅</p>
             </a>
         </li>
-        <li <?php if(CONTROLLER_NAME == 'Task2'): ?>class="active"<?php endif; ?> >
-        <div class="fabu">
-            <a href="<?php echo U('Task/handle');?>" style="font-size: 35px; color: #fff; ">+</a>
-        </div>
 
+
+        <li>
+        <a href="https://www.baifenfa.com/app.php/MzQ1">
+            <span><i class="icon_app" style="width: 20px;height: 20px;"></i></span>
+            <p>下载</p>
+        </a>
         </li>
+
+
+
 		<li <?php if(CONTROLLER_NAME == 'Member' and ACTION_NAME == 'notice'): ?>class="active"<?php endif; ?> >
            <a href="<?php echo U('Member/notice');?>">
                 <span><i class="icon_xiaoxi" style="width: 20px;height: 20px;"></i></span>

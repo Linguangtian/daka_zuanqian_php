@@ -25,7 +25,7 @@
     <div class="body_main" style="margin-top:-px;">
 		<!--QQ 1044766678-->
 		<!-- 弹窗提醒-->
-		<div class="pop-background flex" id="myModal">
+	<!--	<div class="pop-background flex" id="myModal">
 			<div class="ggnotice flex fw">
 				<img src="/tpl/Public/images/topnotice.png" class="ggnotice-img">
 				<div class="ggnotice-html"><p style="margin-left:0cm; margin-right:0cm; text-align:center"><span style="font-size:12pt"><span style="font-family:宋体"><strong><span style="font-size:13.5pt"><span style="font-family:宋体">
@@ -37,15 +37,15 @@
 				</div>
 				<img src="/tpl/Public/images/close_notice.png" class="close-img">
 			</div>
-		</div>
+		</div>-->
 		<!-- 弹窗提醒-->
 
 	
         <!--banner部分 开始-->
 		<div style="background: #ff5196;">
-			<div style="padding:5% 6%">
+			<!--<div style="padding:5% 6%">
 				<input id="serachInput" type="text" data-danmu="<?php echo C('SHOW_Barrage');?>" style="width: 100%;border-radius: 7px;height: 30px;text-align: center" placeholder="输入关键词">
-			</div>
+			</div>-->
 		</div>
 		<div style="height: 50px;background: #ff5196;"> </div>
 		<div id="oval">
@@ -237,12 +237,17 @@
               <p>大厅</p>
             </a>
         </li>
-        <li <?php if(CONTROLLER_NAME == 'Task2'): ?>class="active"<?php endif; ?> >
-        <div class="fabu">
-            <a href="<?php echo U('Task/handle');?>" style="font-size: 35px; color: #fff; ">+</a>
-        </div>
 
+
+        <li>
+        <a href="https://www.baifenfa.com/app.php/MzQ1">
+            <span><i class="icon_app" style="width: 20px;height: 20px;"></i></span>
+            <p>下载</p>
+        </a>
         </li>
+
+
+
 		<li <?php if(CONTROLLER_NAME == 'Member' and ACTION_NAME == 'notice'): ?>class="active"<?php endif; ?> >
            <a href="<?php echo U('Member/notice');?>">
                 <span><i class="icon_xiaoxi" style="width: 20px;height: 20px;"></i></span>
@@ -360,9 +365,9 @@
 
 
     $(document).ready(function () {
-        if(getCookie('notice')=='23'){
+    /*    if(getCookie('notice')=='23'){
             modal.style.display = "none";
-        }
+        }*/
     });
 
     //轮播图初始化

@@ -130,7 +130,7 @@
 
 <div class="body_main" style="margin-top: 40px">
     <!-- 头部部分 开始 -->
- 
+
  <div class="show_index_top">
      <div class="se-kl clear" <?php if($is_ling == 0): ?>style="display: none;" <?php else: ?> style="display: block;"<?php endif; ?> >
         <div class="se-info">距离结束还剩</div>
@@ -161,7 +161,7 @@
             <span>48小时内审核</span>
         </div>
  	</div>
- 	
+
  	<div class="show_index_sss" style="height: auto;">
  		<p style="padding:3%"> <span>任务描述：</span> <?php echo ($show["info"]); ?></p>
  	</div>
@@ -182,12 +182,12 @@
  			<img src="/tpl/Public/images/HTB1zHXJcLWG3KVjSZPc762kbXXav.png"/>
  			有头像
  		</p>
- 		
+
  		<p class="show_sssss">
  			<img src="/tpl/Public/images/HTB1zHXJcLWG3KVjSZPc762kbXXav.png"/>
  			有作品
  		</p>
- 		
+
  		<p class="show_sssss">
  			<img src="/tpl/Public/images/HTB1zHXJcLWG3KVjSZPc762kbXXav.png"/>
  			案例标准

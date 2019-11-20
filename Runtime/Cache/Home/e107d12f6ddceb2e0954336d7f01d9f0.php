@@ -196,10 +196,10 @@
 				<div class="num">我的余额</div>
 			</div>
 			<span class="u-data-g">|</span>
-			<div class="mesBox goto">
+			<!--<div class="mesBox goto">
 				<a href="/index.php/Home/Member/recharge_do.html">充值</a>
 			</div>
-
+-->
 			<div class="mesBox goto">
 				<a href="/index.php/Home/Member/tixian.html">提现</a>
 			</div>
