@@ -53,8 +53,11 @@ class QrcodeController extends HomeBaseController
         \QRcode::png($url,$save_path,QR_ECLEVEL_L,$size,2,false,0xFFFFFF,0x000000);
         //合成文字
         $backgroud = 'tpl/Public/images/agent_bg1.png';
+
         $img = imagecreatefromstring(file_get_contents($backgroud));
-//        var_dump($img);die;
+
+       
+        //        var_dump($img);die;
 
         $font = 'tpl/font/msyh.ttf';//字体
         $fontColor = imagecolorallocate($img, 0, 0, 0);//字体颜色 RGB

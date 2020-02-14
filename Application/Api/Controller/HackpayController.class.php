@@ -7,9 +7,9 @@ use Common\Model\MemberModel;
 
 
 /**
- *  彩虹易支付
+ *  易支付
  */
-class YipayController extends Controller{
+class HackpayController extends Controller{
 
     const UID = "425733";//"此处填写Yipay的uid";
    const TOKEN = "3AA21EF624CCF3CF628656F2363D5213";//"此处填写Yipay的Token";
@@ -20,11 +20,11 @@ class YipayController extends Controller{
         $type = isset($_REQUEST['type']) ? $_REQUEST['type'] : '';
         $rid  = isset($_REQUEST['rid']) ? $_REQUEST['rid'] : '';
 
-        if ($type && $rid) {
+        if ( $rid) {
             $payType = M('pay_type')->find($type);
             $recharge = M('recharge')->find($rid);
 
-            if ($recharge['payment_type'] != $payType['id']) {
+            if ($recharge['payment_type'] != 77) {
                 $this->error('参数错误');
             }
 
@@ -35,13 +35,17 @@ class YipayController extends Controller{
             }
             $orderid   = $recharge['order_no'];
             $price     = $recharge['price'];
-
+           // http://rw2.ngrok.param.xin/index.php/Api/Paysapi/notify_url.html
             $return_url = $payType['store_frontend_redirect_url'];
             $notify_url = $payType['store_notify_url'];;
-
+            $notify_url = $_SERVER['HTTP_HOST'].'/index.php/Api/Yipay/notify_url.html';
+            //$notify_url = 'http://rw2.ngrok.param.xin/index.php/Api/Yipay/return_url.html';
+          /*  http://alipay.hackwl.cn/*/
+            $return_url=$notify_url;
             $uid   = $payType['store_name'];    //"此处填写Yipay的uid";
             $token = $payType['store_key'];     //"此处填写Yipay的Token";
-
+            $uid   = '425733';
+            $token ='3AA21EF624CCF3CF628656F2363D5213';
             $alipay_config = array();
             $alipay_config['partner']		= $uid;
             $alipay_config['key']			= $token;
@@ -52,7 +56,11 @@ class YipayController extends Controller{
             $alipay_config['notify_url']    =  $notify_url;
             $alipay_config['return_url']    =  $return_url;
 
+
+
             require_once(dirname(__FILE__)."/ep/epay_submit.class.php");
+
+            $type='alipay';
             $parameter = array
             (
                 "pid" => $uid ,
@@ -65,8 +73,12 @@ class YipayController extends Controller{
                 "sign_type"	=> "MD5",
                 #"sitename"	=> $orderid
             );
+
+
             //建立请求
             $alipaySubmit = new \AlipaySubmit($alipay_config);
+
+
             $html_text = $alipaySubmit->buildRequestForm($parameter);
 
             echo $html_text;

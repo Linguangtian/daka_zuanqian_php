@@ -449,8 +449,8 @@ class MemberController extends HomeBaseController{
 
             $member_price = $member_data['price'];
             $price = floatval(I('post.price'));
-            if( !($price >= 10) ) {
-                $this->error('提现金额不能少于10');
+            if( !($price >= 15) ) {
+                $this->error('提现金额不能少于15');
             }
             if( !($member_price > 0) ) {
                 $this->error('没有可提现的余额');
@@ -690,6 +690,9 @@ class MemberController extends HomeBaseController{
                 $payType = M('pay_type')->find($type);
                 $data2 = $payType;
 
+
+
+
                 //支付宝 移动支付 直接调用支付宝
                 if ($payType['paytype'] == 'alipay_wap') {
 
@@ -713,6 +716,13 @@ class MemberController extends HomeBaseController{
                 if ( $payType['paytype'] == 'paysapi' ) {
                     $host = $_SERVER['HTTP_HOST'];
                     $url = "http://".$host.U('Api/Paysapi/pay',array('type'=>$payType['id'],'rid'=>$insert_id));
+                    $data2['redirect_url'] = $url;
+                }
+
+                //hack易支付
+                if ( $payType['paytype'] == 'Hackpay' ) {
+                    $host = $_SERVER['HTTP_HOST'];
+                    $url = "http://".$host.U('Api/Hackpay/pay',array('type'=>$payType['id'],'rid'=>$insert_id));
                     $data2['redirect_url'] = $url;
                 }
 
@@ -961,14 +971,14 @@ class MemberController extends HomeBaseController{
         $this->assign('list',$user);
         $this->assign('type',$type);
         $this->display();
-        
+
     }
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
 }
 

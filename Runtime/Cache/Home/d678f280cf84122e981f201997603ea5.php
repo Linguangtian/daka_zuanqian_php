@@ -24,7 +24,7 @@
 <div id="body">
     <div class="body_main" style="margin-top:-px;">
 		<!--QQ 1044766678-->
-	<!--	&lt;!&ndash; 弹窗提醒&ndash;&gt;
+	<!--	&lt;!&ndash; 弹窗提醒&ndash;&gt;-->
 		<div class="pop-background flex" id="myModal">
 			<div class="ggnotice flex fw">
 				<img src="/tpl/Public/images/topnotice.png" class="ggnotice-img">
@@ -37,7 +37,7 @@
 				</div>
 				<img src="/tpl/Public/images/close_notice.png" class="close-img">
 			</div>
-		</div>-->
+		</div>
 		<!-- 弹窗提醒-->
 
 	
@@ -157,10 +157,10 @@
         
         <!-- 推荐任务 列表 开始-->
         <div class="index_rwlb task_index_rwlbfl">
-        	<p class="index_tjrw">推荐任务 <a href="<?php echo U('Index/serach',array('id'=>$vo['id']));?>" style="float: right;color: #9a9292;">more > 　</a></p>
+        	<p class="index_tjrw">推荐任务 <!--<a href="<?php echo U('Index/serach',array('id'=>$vo['id']));?>" style="float: right;color: #9a9292;">more > 　--></a></p>
         	 <?php if(is_array($task_list)): $i = 0; $__LIST__ = $task_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><a href="<?php echo U('Task/show',array('id'=>$vo['id']));?>">
 					<div class="index_rwxq">
-						<img src="<?php echo ($vo["ico"]); ?>"/>
+						<img src="<?php echo ($sys_config["web_logo"]); ?>"/>
 
 						<div class="index_wzns">
 							<p class="index_title"><?php echo ($vo["title"]); ?></p>
@@ -366,7 +366,7 @@
 
     $(document).ready(function () {
         if(getCookie('notice')=='23'){
-            modal.style.display = "none";
+           // modal.style.display = "none";
         }
     });
 

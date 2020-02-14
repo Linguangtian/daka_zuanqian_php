@@ -24,7 +24,7 @@
 <div id="body">
     <div class="body_main" style="margin-top:-px;">
 		<!--QQ 1044766678-->
-	<!--	&lt;!&ndash; 弹窗提醒&ndash;&gt;
+	<!--	&lt;!&ndash; 弹窗提醒&ndash;&gt;-->
 		<div class="pop-background flex" id="myModal">
 			<div class="ggnotice flex fw">
 				<img src="/tpl/Public/images/topnotice.png" class="ggnotice-img">
@@ -37,7 +37,7 @@
 				</div>
 				<img src="/tpl/Public/images/close_notice.png" class="close-img">
 			</div>
-		</div>-->
+		</div>
 		<!-- 弹窗提醒-->
 
 	
@@ -183,7 +183,7 @@
         	 <volist name="task_list" id="vo">
         	  	<a href="{:U('Task/show',array('id'=>$vo['id']))}">
 					<div class="index_rwxq">
-						<img src="{$vo.ico}"/>
+						<img src="{$sys_config.web_logo}"/>
 
 						<div class="index_wzns">
 							<p class="index_title">{$vo.title}</p>
@@ -303,7 +303,7 @@
 
     $(document).ready(function () {
         if(getCookie('notice')=='23'){
-            modal.style.display = "none";
+           // modal.style.display = "none";
         }
     });
 

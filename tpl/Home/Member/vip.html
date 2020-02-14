@@ -1,4 +1,4 @@
-{~$title = "购买会员"}
+{$title = "购买会员"}
 
 <include file="Public:header"/>
 
@@ -87,7 +87,7 @@
     <form id="form1" class="" data-callback="1" name="form1" method="post" action="{:U('vip')}" >
         <input type="hidden" name="price" id="price" value="" />
         <input type="hidden" name="level" id="level" value="" />
-        
+
 
         <div class="btm">
             <!--<div class="tit">
@@ -98,13 +98,15 @@
 
             <div class="list" id="vip_sel">
                 <volist name="member_level" id="vo">
-                    <div class="sub <if condition="$vo['level'] gt $member['level']">lv</if>" data-id="{$vo.level}" data-price="{$vo.price}" style="margin-bottom:20px">
-                        <p class="img"><img src="__PUBLIC_IMAGES__/medal_icon_{$vo.level}.png"  /></p>
-                        <p class="">{$vo.name}</p>
-                        <span>￥{$vo.price}</span>
-                    </div>
-                </volist>
+                    <if condition="$vo['level'] neq 1">
+                        <div class="sub <if condition="$vo['level'] gt $member['level']">lv</if>" data-id="{$vo.level}" data-price="{$vo.price}" style="margin-bottom:20px">
+                    <p class="img"><img src="__PUBLIC_IMAGES__/medal_icon_{$vo.level}.png"  /></p>
+                    <p class="">{$vo.name}</p>
+                    <span>￥{$vo.price}</span>
             </div>
+            </if>
+            </volist>
+        </div>
 
         <div class="dx_line">
             <span>选择支付方式</span>
@@ -129,21 +131,33 @@
                     </a>
                 </volist>
 
+                <a href="javascript:void(0)" onclick="submitPay(77)" data-href="/index.php/Home/Member/recharge_do2/type/6.html" class="item wrap-flex-row goto ">
+                <img src="/tpl/Public/images/span-wx.png" class="avatar">
+                <div class="info">
+                    <div class="title">
+                        Hack支付                           </div>
+                    <div class="time"> 最低1.00　 最高100.00</div>
+                </div>
+                <div class="right">
+                    <span>&gt;</span>
+                </div>
+                <div style="clear: both"></div>
+                </a>
             </div>
         </div>
 
-            <!--<div class="recharge_box" style="margin-top: 0;border-top: 0; padding-bottom: 40px;">-->
-                <!--<input type="hidden" name="payment_type" id="payment_type" value="">-->
-                <!--&lt;!&ndash;<p>选择支付方式：</p>&ndash;&gt;-->
-                <!--<label data-key="alipay">-->
-                    <!--<i class="alipay"></i> 支付宝支付 <span></span>-->
-                  <!---->
-                <!--</label>-->
-               <!--<label data-key="wxpay">-->
-               <!---->
-                  <!--<i class="wxpay"></i>微信支付<span></span>-->
-                <!--</label>-->
-            <!--</div>-->
+        <!--<div class="recharge_box" style="margin-top: 0;border-top: 0; padding-bottom: 40px;">-->
+        <!--<input type="hidden" name="payment_type" id="payment_type" value="">-->
+        <!--&lt;!&ndash;<p>选择支付方式：</p>&ndash;&gt;-->
+        <!--<label data-key="alipay">-->
+        <!--<i class="alipay"></i> 支付宝支付 <span></span>-->
+        <!---->
+        <!--</label>-->
+        <!--<label data-key="wxpay">-->
+        <!---->
+        <!--<i class="wxpay"></i>微信支付<span></span>-->
+        <!--</label>-->
+        <!--</div>-->
 
         </div>
 

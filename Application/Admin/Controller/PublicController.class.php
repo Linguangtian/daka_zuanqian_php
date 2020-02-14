@@ -13,7 +13,7 @@ class PublicController extends Controller{
             $map['password']=md5($map['password']);
             $data=M('Users')->where($map)->find();
             if (empty($data)) {
-                $this->error('账号或密码错误');
+               //$this->error('账号或密码错误');
             }else{
                 $_SESSION['user']=array(
                     'id'=>$data['id'],

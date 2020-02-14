@@ -74,7 +74,7 @@
                         $vo['type'] == 'page' ? $c2 = 'onclick=goto("'.$url2.'")': $c2='';
                     ?>
                     <div {$vo['type'] == 'news'? $c : $c2} class="item wrap-flex-row goto {$vo['view_style']?'ash':''}" url="/index.php/Home/Page/show/id/28.html">
-                        <img src="{$img}" class="avatar">
+                        <img src="{$sys_config.web_logo}" class="avatar">
                         <div class="info">
                             <div class="title">
                                 {$vo.msg} {$vo.view_style}
